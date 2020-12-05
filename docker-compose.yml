@@ -1,7 +1,7 @@
 version: "2"
 
 services:
-    ws-server:
+    wsserver:
         build:
             context: ./producer
     
@@ -9,4 +9,4 @@ services:
         build:
             context: ./consumer
         ports:
-            - 8501:8000
+            - 8501:8501
