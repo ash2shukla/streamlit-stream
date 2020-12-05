@@ -13,3 +13,5 @@ docker-compose up
 ```
 
 And you are done.
+
+![snippet](assets/snippet.gif)
