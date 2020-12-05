@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+    ws-server:
+        build:
+            context: ./producer
+    
+    lit-app:
+        build:
+            context: ./consumer
+        ports:
+            - 8501:8000
