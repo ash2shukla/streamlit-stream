@@ -15,3 +15,27 @@ docker-compose up
 And you are done.
 
 ![snippet](assets/snippet.gif)
+
+#### For non-docker people
+
+```
+pip install -r requirements.txt
+```
+
+In producer directory:
+
+```
+cd producer
+uvicorn main:app --port 8000
+```
+
+In consumer/src directory:
+
+```
+cd consumer
+cd src
+
+streamlit run main.py
+```
+
+

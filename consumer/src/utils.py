@@ -1,9 +1,11 @@
 import aiohttp
 from collections import deque, defaultdict
 from functools import partial
-
-WS_CONN = "ws://wsserver/sample"
-
+from os import getenv
+if getenv("IS_DOCKERIZED"):
+    WS_CONN = "ws://wsserver/sample"
+else:
+    WS_CONN = "ws://localhost:8000/sample"
 async def consumer(graphs, selected_channels, window_size, status):
     windows = defaultdict(partial(deque, [0]*window_size, maxlen=window_size))
 

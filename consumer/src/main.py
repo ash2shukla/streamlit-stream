@@ -11,7 +11,7 @@ connect = st.checkbox("Connect to WS Server")
 
 selected_channels = st.multiselect("Select Channels", ["A", "B", "C"], default=["A"])
 
-columns = [col.empty() for col in st.beta_columns(len(selected_channels))]
+columns = [col.empty() for col in st.columns(len(selected_channels))]
 
 
 window_size = st.number_input("Window Size", min_value=10, max_value=100)
